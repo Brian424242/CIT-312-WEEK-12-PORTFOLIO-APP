@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="enabler.js" defer></script>
+</head>
+<body>
+<!--header-->
+    <div style="width: 100%; height: 10px; background-color: #000F5D;"></div>
+    <header style="width:100%; height:50px; font-size: xx-large; background-color: #D59F0F; text-align: center;">Birding in Indiana</header>
+    <div style="width: 100%; height: 10px; background-color: #000F5D; margin-bottom: 25px;"></div>
+<!--alert, new bootstrap feature-->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Welcome!</strong>   Enjoy the website! This month we focus on two bird types - finches and woodpeckers. Use the map to locate state parks across Indiana, and complete your own checklist of birds using the buttons at the bottom of the page!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <div class="container-fluid">
+<!--first row-->
+        <div class="row" style="margin-bottom: 25px;">
+<!--first column, finch carousel and accordion-->
+            <div class="col-6 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 carousel-area">
+                <div style="width: 100%; height: 30px; background-color:#D59F0F; font-size: large; text-align:center; border: 2px solid #000F5D;">Finches</div>
+                <div id="course_carousel" class="carousel" data-bs-ride="carousel" data-bs-interval="5000" style="margin-bottom: 25px; border: 2px solid #000F5D">
+        <!--carousel indicators-->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="0" class="active">
+                        </button>
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="1">
+                        </button>
+                        <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="2">
+                        </button>
+                    </div>
+        <!--carousel content-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./assets/housefinch.jpg" alt="House Finch">
+                            <div class="carousel-caption">
+                                <h2>House Finch</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/goldfinch.jpg" alt="Goldfinch">
+                            <div class="carousel-caption">
+                                <h2>Goldfinch</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/pinesiskin.jpg" alt="Pine Siskin">
+                            <div class="carousel-caption">
+                                <h2>Pine Siskin</h2>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#course_carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            <!--accordion for finches-->
+                <div style="width: 100%; height: 30px; background-color:#D59F0F; font-size: large; text-align:center; border: 2px solid #000F5D;">Learn more about finches!</div>
+                <div class="accordion" id="accordionBirds">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">House Finch</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="House finch" data-bs-parent="#accordionBirds">
+                            <div class="accordion-body">The House Finch can be found in most neighborhoods in North America. They have a bright red head and chest. House Finches like to eat sunflower seeds.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Goldfinch</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="Goldfinch" data-bs-parent="#accordionBirds">
+                            <div class="accordion-body">The American Goldfinches are small, common finches that frequent weedy and brushy fields, second growth, parks, and backyards. Outside of the breeding season, they occur in small flocks and often visit feeders.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Pine Siskin</button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="Pine siskin" data-bs-parent="#accordionBirds">
+                            <div class="accordion-body">Pine Siskins are very small songbirds with sharp, pointed bills and short, notched tails. Their uniquely shaped bill is more slender than that of most finches.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--second column, woodpecker carousel and accordion-->
+            <div class="col-6 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 carousel-area">
+                <div style="width: 100%; height: 30px; background-color:#D59F0F; font-size: large; text-align:center; border: 2px solid #000F5D;">Woodpeckers</div>
+                <div id="course_carousel2" class="carousel" data-bs-ride="carousel" data-bs-interval="5000" style="margin-bottom: 25px; border: 2px solid #000F5D">
+        <!--carousel indicators-->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#course-carousel2" data-bs-slide-to="0" class="active">
+                        </button>
+                        <button type="button" data-bs-target="#course-carousel2" data-bs-slide-to="1">
+                        </button>
+                        <button type="button" data-bs-target="#course-carousel2" data-bs-slide-to="2">
+                        </button>
+                    </div>
+        <!--carousel content-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./assets/downywoodpecker.jpg" alt="Downy Woodpecker">
+                            <div class="carousel-caption">
+                                <h2>Downy Woodpecker</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/hairywoodpecker.jpg" alt="Hairy Woodpecker">
+                            <div class="carousel-caption">
+                                <h2>Hairy Woodpecker</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/pileatedwoodpecker.jpg" alt="Pileated Woodpecker">
+                            <div class="carousel-caption">
+                                <h2>Pileated Woodpecker</h2>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#course_carousel2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            <!--accordion for woodpeckers-->
+                <div style="width: 100%; height: 30px; background-color:#D59F0F; font-size: large; text-align:center; border: 2px solid #000F5D;">Learn more about woodpeckers!</div>
+                <div class="accordion" id="accordionBirds2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Downy Woodpecker</button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="Downy woodpecker" data-bs-parent="#accordionBirds2">
+                            <div class="accordion-body">Downy Woodpeckers are small versions of the classic woodpecker body plan. They have a straight, chisel-like bill, blocky head, wide shoulders, and straight-backed posture as they lean away from tree limbs and onto their tail feathers.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Hairy Woodpecker</button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="Hairy woodpecker" data-bs-parent="#accordionBirds2">
+                            <div class="accordion-body">Hairy Woodpeckers are contrastingly black and white. The black wings are checkered with white; the head has two white stripes (and, in males, a flash of red toward the back of the head). A large white patch runs down the center of the black back.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Pileated Woodpecker</button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="Pileated woodpecker" data-bs-parent="#accordionBirds2">
+                            <div class="accordion-body">The Pileated Woodpecker is one of the biggest, most striking forest birds on the continent. It’s nearly the size of a crow, black with bold white stripes down the neck and a flaming-red crest.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--third column, modal indiana state parks picture-->
+            <div class="col-10 col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-10">
+                <img src="./assets/indiana.JPG" type="button" class="btn indiana" data-bs-toggle="modal" data-bs-target="#indianaModal" style="width:100%; margin:auto;">
+                <div class="modal fade" id="indianaModal" tabindex="-1" aria-labelledby="indianaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="indianaModalLabel">Indiana State Parks</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>State parks across Indiana are a great place for some birdwatching!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--second row-->
+        <div class="row">
+<!--bottom column - button group, checkboxes, tooltips column-->
+            <div class="col">
+                <div class="container-fluid" style="margin-top: 50px;">
+                    <div>
+                        <h2 style="text-align: center; margin-bottom: 25px;">Which of the following birds have you seen?</h2>
+                    </div>
+                    <div class="btn-group-lg btn-group-toggle" data-toggle="buttons" style="text-align: center;">
+                        <input type="checkbox" class="btn-check" id="blackbirdButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="blackbirdButton">Red-winged blackbird
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Red-winged blackbird">
+                                    <img src="./assets/blackbird.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="cardinalButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="cardinalButton">Northern cardinal
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Northern cardinal">
+                                    <img src="./assets/cardinal.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="doveButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="doveButton">Mourning dove
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Mourning dove">
+                                    <img src="./assets/dove.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="bluebirdButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="bluebirdButton">Eastern bluebird
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Eastern bluebird">
+                                    <img src="./assets/bluebird.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="sparrowButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="sparrowButton">House sparrow
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="House sparrow">
+                                    <img src="./assets/sparrow.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="nuthatchButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="nuthatchButton">White-breasted nuthatch
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="White-breasted nuthatch">
+                                    <img src="./assets/nuthatch.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="titmouseButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="titmouseButton">Tufted titmouse
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Tufted titmouse">
+                                    <img src="./assets/titmouse.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="robinButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="robinButton">American robin
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="American robin">
+                                    <img src="./assets/robin.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="chickadeeButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="chickadeeButton">Carolina chickadee
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Carolina chickadee">
+                                    <img src="./assets/chickadee.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="grackleButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="grackleButton">Common grackle
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Common grackle">
+                                    <img src="./assets/grackle.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="jayButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="jayButton">Blue jay
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Blue jay">
+                                    <img src="./assets/jay.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                        <input type="checkbox" class="btn-check" id="crowButton"  autocomplete="off">
+                        <label class="btn btn-outline-info" for="crowButton">American crow
+                            <div class="tooltip-area">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="American crow">
+                                    <img src="./assets/crow.jpg" style="width:250px; height:250px;">
+                                </span> 
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--footer-->
+    <div style="width: 100%; height: 10px; background-color: #000F5D; margin-top: 50px;"></div>
+    <footer style="width:100%; height:30px;; background-color: #D59F0F; text-align: center;"></footer>
+    <div style="width: 100%; height: 10px; background-color: #000F5D;"></div>
+</body>
+</html>
+

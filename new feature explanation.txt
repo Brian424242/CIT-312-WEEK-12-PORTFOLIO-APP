@@ -1,0 +1,5 @@
+I decided to use the alert bootstrap component as the "new feature" on my webpage. I thought it would be fun to add a welcome message for the visitor, and ended up using the alert to provide a brief description of what the page offers. 
+
+I added this alert above the main container but below the header; I wanted to make sure that the user sees the message, but I didnt want it to get in the way of the header. Placing it directly below the header seemed like the most logical place for it. Keeping it outside of the main container ensures that it doesnt cause any issues with the rest of the page. 
+
+Once the alert is canceled, the container div just moves up into its space. This feels like a good balance between an item that I want to make sure the user sees, but at the same time, want to make sure that it is easy to dismiss and non-invasive.
